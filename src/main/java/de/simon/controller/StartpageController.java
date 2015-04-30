@@ -5,14 +5,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-
 public class StartpageController {
 	
-	@RequestMapping("/")
+	@RequestMapping("/login.html")
 	public ModelAndView getStartPage (){
-		ModelAndView mv = new ModelAndView("/welcome");
+		ModelAndView mv = new ModelAndView("login");
+		
 		
 		return mv;
+	}
+	
+	@RequestMapping("/welcome")
+	public ModelAndView getHomepage(){
+		return new ModelAndView("welcome");
 	}
 
 }
