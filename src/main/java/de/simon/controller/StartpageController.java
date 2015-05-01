@@ -19,5 +19,10 @@ public class StartpageController {
 	public ModelAndView getHomepage(){
 		return new ModelAndView("welcome");
 	}
+	
+	@RequestMapping("/login")
+	public ModelAndView getLogin(){
+		return new ModelAndView("login");
+	}
 
 }
