@@ -11,4 +11,5 @@ public interface UserDAO {
 	void delete (long id);
 	List<User> getAll();
 	User findById (long id);
+	User findByUserName(String username);
 }

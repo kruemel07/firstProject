@@ -37,4 +37,9 @@ public class UserDAOImpl implements UserDAO{
 	public User findById(long id) {
 		return em.createQuery("SELECT u FROM User u WHERE userId="+id+"'", User.class).getSingleResult();
 	}
+
+	@Override
+	public User findByUserName(String username) {
+		return em.createQuery("SELECT u FROM User u WHERE userName=" +username +"'", User.class).getSingleResult();
+	}
 }
